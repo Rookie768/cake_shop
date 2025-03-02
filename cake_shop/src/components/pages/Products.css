@@ -1,0 +1,9 @@
+.products-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-page > div:first-child {
+  flex: 1;
+}
