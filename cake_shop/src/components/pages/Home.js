@@ -5,12 +5,18 @@ const Home = () => {
   return (
     <div className="home-container">
       <section className="banner">
-        <div className="banner-content">
-          <h1>Bring A Box Of <span className="highlight">Happiness Today</span></h1>
-          <p>Order delicious cakes, pastries, and more from Monginis.</p>
-          <a href="https://cakesonline.monginis.net" className="order-button">
-            Order Now
-          </a>
+        <video autoPlay muted loop className="banner-video">
+          <source src="./video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="banner-overlay">
+          <div className="banner-content">
+            <h1>Bring A Box Of <span className="highlight">Happiness Today</span></h1>
+            <p>Order delicious cakes, pastries, and more from Monginis.</p>
+            <a href="https://cakesonline.monginis.net" className="order-button">
+              Order Now
+            </a>
+          </div>
         </div>
       </section>
 
