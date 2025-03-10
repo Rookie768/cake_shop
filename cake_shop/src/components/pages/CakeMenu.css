@@ -1,0 +1,68 @@
+.products-page {
+  min-height: max-content;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: var(--padding-large);
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+
+}
+
+.cake-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--padding-large);
+}
+
+.cake-menu-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--margin-medium);
+  color: #333;
+}
+
+.cake-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: var(--padding-small);
+}
+
+.cake-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cake-card:hover {
+  /* transform: translateY(-5px); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cake-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cake-info {
+  padding: var(--padding-medium);
+  text-align: center;
+}
+
+.cake-name {
+  font-size: 1.25rem;
+  margin-bottom: var(--margin-small);
+  color: #333;
+}
+
+.cake-price {
+  font-size: 1rem;
+  color: #666;
+}
+
+.cake-description {
+  font-size: 0.9rem;
+  color: #888;
+}

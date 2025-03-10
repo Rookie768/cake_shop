@@ -1,9 +1,11 @@
 import React from "react";
 import "./Home.css";
-
+import useDynamicBackgroundColor from '../common/DynmicBgColor'; // Adjusted to match the file name
 const Home = () => {
+  const backgroundColor = useDynamicBackgroundColor();
+
   return (
-    <div className="home-container">
+    <div className="home-container" style={{ backgroundColor }}>
       <section className="banner">
         <video autoPlay muted loop className="banner-video">
           <source src="./video.mp4" type="video/mp4" />
@@ -11,44 +13,43 @@ const Home = () => {
         </video>
         <div className="banner-overlay">
           <div className="banner-content">
-            <h1>Bring A Box Of <span className="highlight">Happiness Today</span></h1>
-            <p>Order delicious cakes, pastries, and more from Monginis.</p>
-            <a href="https://cakesonline.monginis.net" className="order-button">
-              Order Now
-            </a>
-          </div>
-        </div>
+               <h1>Bring A Box Of <span className="highlight">Happiness Today</span></h1>
+               <p>Order delicious cakes, pastries, and more from Monginis.</p>
+               <a href="https://cakesonline.monginis.net" className="order-button">
+               Order Now
+               </a>
+            <div className="products" >
+                 <h2>Our Bestsellers</h2>
+                 <div className="product-list">
+              <div className="product-card">
+                <img src="https://via.placeholder.com/150" alt="Cake" />
+                <h3>Chocolate Truffle</h3>
+                <p>Rich chocolate cake with truffle frosting.</p>
+              </div>
+              <div className="product-card">
+                <img src="https://via.placeholder.com/150" alt="Pastry" />
+                <h3>Rainbow Pastry</h3>
+                <p>Soft layers of colorful delight.</p>
+              </div>
+              <div className="product-card">
+                <img src="https://via.placeholder.com/150" alt="Burger" />
+                <h3>Veg Burger</h3>
+                <p>A delicious and fulfilling snack.</p>
+              </div>
+            </div>
+             </div>      
+            </div>
+            </div>
       </section>
-
-      <section className="products">
-        <h2>Our Bestsellers</h2>
-        <div className="product-list">
-          <div className="product-card">
-            <img src="https://via.placeholder.com/150" alt="Cake" />
-            <h3>Chocolate Truffle</h3>
-            <p>Rich chocolate cake with truffle frosting.</p>
-          </div>
-          <div className="product-card">
-            <img src="https://via.placeholder.com/150" alt="Pastry" />
-            <h3>Rainbow Pastry</h3>
-            <p>Soft layers of colorful delight.</p>
-          </div>
-          <div className="product-card">
-            <img src="https://via.placeholder.com/150" alt="Burger" />
-            <h3>Veg Burger</h3>
-            <p>A delicious and fulfilling snack.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="delivery-options">
+      
+        <section className="delivery-options">
         <div className="option">
           <img
             src="/images/delivery.png" // Replace with actual image path
             alt="Delivery"
           />
           <h3>Delivering at your doorstep.</h3>
-          <a href="https://cakesonline.monginis.net" className="order-button">
+          <a href="https://cakesonline.monginis.net" className="order-button2">
             Order Online
           </a>
         </div>

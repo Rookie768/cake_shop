@@ -13,6 +13,8 @@
   }
   
   .banner h1 {
+    position: relative;
+    top: 10px;
     font-size: 2.5rem;
     font-weight: bold;
   }
@@ -34,18 +36,17 @@
   
   .banner-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
+   
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     color: white;
-    text-align: center;
+    /* text-align: center; */
   }
   
   .banner-overlay h1,
@@ -94,8 +95,17 @@
   }
   
   .order-button {
+
     background-color: #ff007f;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+      color: white; /* Text color */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Pointer cursor on hover */
   }
+
   
   .store-button {
     background-color: #d81b60;
@@ -110,9 +120,12 @@
   }
   
   .products {
-    margin-top: 30px;
-  }
-  
+    position: absolute; /* Use absolute positioning */
+    bottom: 20px; /* Adjust this value as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset by half of its width to truly center */
+    margin-top: 3px; /* Keep your existing margin */
+}
   .products h2 {
     font-size: 2rem;
     color: #ff007f;
